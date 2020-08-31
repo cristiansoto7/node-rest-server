@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false })) //los .use son middlewares l
 app.use(bodyParser.json())
 app.use(require('./routes/usuario'))
 
-mongoose.connect(process.env.urlDB = urlDB,//ahora le pasamos la conexion de bbdd por variable  
+mongoose.connect(process.env.urlDB,//ahora le pasamos la conexion de bbdd por variable  
     {useNewUrlParser:true, useCreateIndex:true},
     (err, res) => {
         if (err) throw err;
